@@ -1,8 +1,8 @@
 <?php
 	$servidor = "fdb30.awardspace.net";
-	$usuario = "3639130_adilsoftware";
-	$senha = "ad81guilherme";
-	$dbname = "3639130_adilsoftware";
+	$usuario = "";
+	$senha = "";
+	$dbname = "";
 	
 
 	//Criar a conexão
