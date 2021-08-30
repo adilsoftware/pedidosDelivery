@@ -19,9 +19,9 @@
 <?php 
 
 $localhost = "fdb30.awardspace.net"; #localhost
-$dbusername = "3639130_adilsoftware"; #username of phpmyadmin
-$dbpassword = "ad81guilherme";  #password of phpmyadmin
-$dbname = "3639130_adilsoftware";  #database name
+$dbusername = ""; #username of phpmyadmin
+$dbpassword = "";  #password of phpmyadmin
+$dbname = "";  #database name
  
 #connection string
 $conn = mysqli_connect($localhost,$dbusername,$dbpassword,$dbname);
