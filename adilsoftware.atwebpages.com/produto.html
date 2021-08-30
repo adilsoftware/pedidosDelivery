@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="menu.css">
+	</head>
+
+	<body>
+		<nav class="menu">
+			<ul>
+				<li><a href="#">ARQUIVO</a>
+					<ul>
+						<li><a href="#">CADASTRO</a>
+							<ul>
+								<li><a href="clientes.html">CLIENTES</a></li>
+								<li><a href="fornecedor.html">FORNECEDOR</a></li>
+								<li><a href="produto.html">PRODUTOS</a></li>
+							</ul>
+						</li>
+						<li><a href="pesquisar.html">PESQUISAR</a>
+							
+						</li>
+						<li><a href="imprimir.html">IMPRIMIR</a></li>
+						<li><a href="index.html">FECHAR</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">RELATORIO</a>
+					<ul>
+						<li><a href="rel_clientes.html">CLIENTES</a></li>
+						<li><a href="rel_fornecedor.html">FORNECEDOR</a></li>
+						<li><a href="rel_produtos.html">PRODUTOS</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="configuracao.html">CONFIGURAÇÃO</a>
+					
+				</li>
+				
+				<li><a href="ajuda.html">AJUDA</a></li>
+			</ul>
+		</nav>
+		
+		<div class="static"></div>
+	<div class="fundo"></div>
+		<p></p>
+		<p></p>
+		<p></p>
+		<form  class="menu" action="gravaproduto.php" method="GET">
+			<label for="fname">Descrição:</label>			
+			<input type=text name=descricao placeholder="" size=40> <p></p>
+			<label for="fname">Categoria:</label>			
+			<input type=text name=categoria placeholder="" size=40> <p></p>
+			<label for="fname">Valor:</label>			
+			<input type=text name=valor placeholder="" size=10> <p></p>
+			<label for="fname">Quantidade:</label>			
+			<input type=text name=quantidade placeholder="" size=10> <p></p>
+			<label for="fname">Validade:</label>			
+			<input type=text name=validade placeholder="" size=10> <p></p>
+			<input type = "submit" value="Salva ">
+			<input type = "reset" value="Limpar">
+		</form>
+		
+		<div class="rodape">Todos os Direitos reservados a AdilSoftware</div>
+		
+	</body>
+</html>

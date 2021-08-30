@@ -1,0 +1,59 @@
+<?php
+$conexao=mysqli_connect('fdb30.awardspace.net', '3639130_adilsoftware', 'ad81guilherme', '3639130_adilsoftware');
+
+?>
+
+<!DOCTYPE html>
+<html>
+ <head>
+	<title></title>
+</head>
+<body>
+
+	<form name="f_excluir" method="post" action="Rel_clientes.html">
+		
+		<table>
+			<TR>
+				<td>Codigo</td><td>Nome</td><td>Endereço</td><td>Email</td><td>Selecionar</td>
+			</TR>
+
+			<?php
+                        
+
+				if(isset($_POST['sel'])){
+					foreach ($_POST['sel'] as $codigo) {
+						$stmt = $conn->prepare("INSERT  tbitem (idproduto, produto, valor) VALUES (?, ?, ?)");
+                                                $stmt->bind_param("sss", $vcod, $vnome, $vend);
+        
+                                                                        
+				}else{
+					echo "form nao submedito";
+				}
+
+				$sql="select * from tbproduto order by idproduto";
+				$res=mysqli_query($conexao,$sql);
+
+				while($vreg=mysqli_fetch_row($res)){
+					$vcod=$vreg[0];
+					$vnome=$vreg[1];
+                                        $vend=$vreg[2];
+                                        $vema=$vreg[3];
+
+					echo "<tr>";
+					echo "<td>$vcod</td><td>$vnome</td>";
+                                        echo "<td>$vcod</td><td>$vend</td>";
+                                        echo "<td>$vcod</td><td>$vema</td>";
+					echo "<td align=center><input type=checkbox value=$vcod name=sel[]></td>";
+					echo "</tr>";
+				}
+
+			?>
+
+		</table>
+<br>
+		<input type="hidden"  name="f_del" value="f_del"/>
+		<input type="submit" value="excluir" name="bt_excluir"/>
+	</form>
+
+</body>
+</html>

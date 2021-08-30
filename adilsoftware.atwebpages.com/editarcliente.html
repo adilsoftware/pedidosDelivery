@@ -1,0 +1,69 @@
+<html>
+	<head>
+<link href="bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="menu.css">	
+	</head>
+
+	<body>
+		<nav class="menu">
+			<ul>
+				<li><a href="#">ARQUIVO</a>
+					<ul>
+						<li><a href="#">CADASTRO</a>
+							<ul>
+								<li><a href="clientes.html">CLIENTES</a></li>
+								<li><a href="fornecedor.html">FORNECEDOR</a></li>
+								<li><a href="produto.html">PRODUTOS</a></li>
+							</ul>
+						</li>
+						<li><a href="pesquisar.html">PESQUISAR</a>
+							
+						</li>
+						<li><a href="imprimir.html">IMPRIMIR</a></li>
+						<li><a href="index.html">FECHAR</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">RELATORIO</a>
+					<ul>
+						<li><a href="index2.php">CLIENTES</a></li>
+						<li><a href="rel_fornecedor.html">FORNECEDOR</a></li>
+						<li><a href="rel_produtos.html">PRODUTOS</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="configuracao.html">CONFIGURAÇÃO</a>
+
+				</li>
+				
+				<li><a href="ajuda.html">AJUDA</a></li>
+			</ul>
+		</nav>
+		
+		<div class="static"></div>
+	
+		<p></p>
+		<p></p>
+		<p></p>
+                
+                
+                
+		<form  class="menu" action="grava.php" method="GET">
+			<label for="fname">ID:</label>			
+			<input type=text name=idcliente placeholder="" value="<?php echo $_GET['e_id'] ?>" size=40> <p></p>
+			
+                        <label for="fname">Cliente:</label>			
+			<input type=text name=nome placeholder="" size=40> <p></p>
+			<label for="fname">Endereço:</label>			
+			<input type=text name=endereco placeholder="" size=40> <p></p>
+			<label for="fname">Email:</label>			
+			<input type=text name=email placeholder="" size=30> <p></p>
+			<input type = "submit" value="Salva ">
+			<input type = "reset" value="Limpar">
+		</form>
+                
+		<div class="fundo"></div>
+		<div class="rodape">Todos os Direitos reservados a AdilSoftware</div>
+		
+	</body>
+</html>

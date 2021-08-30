@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="menu.css">
+	</head>
+
+	<body>
+		<nav class="menu">
+			<ul>
+				<li><a href="#">ARQUIVO</a>
+					<ul>
+						<li><a href="#">CADASTRO</a>
+							<ul>
+								<li><a href="clientes.html">CLIENTES</a></li>
+								<li><a href="fornecedor.html">FORNECEDOR</a></li>
+								<li><a href="produto.html">PRODUTOS</a></li>
+							</ul>
+						</li>
+						<li><a href="pesquisar.html">PESQUISAR</a>
+							
+						</li>
+						<li><a href="imprimir.html">IMPRIMIR</a></li>
+						<li><a href="index.html">FECHAR</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">RELATORIO</a>
+					<ul>
+						<li><a href="Rel_clientes_excluir.php">CLIENTES</a></li>
+						<li><a href="rel_fornecedor.html">FORNECEDOR</a></li>
+						<li><a href="rel_produtos.html">PRODUTOS</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="configuracao.html">CONFIGURAÇÃO</a>
+				
+				</li>
+				
+				<li><a href="ajuda.html">AJUDA</a></li>
+			</ul>
+		</nav>
+		
+		<div class="static"></div>
+	<div class="fundo"></div>
+		<p></p>
+		<p></p>
+		<p></p>
+		<form  class="menu" action="gravafornecedor.php" method="GET">
+			<label for="fname">Fornecedor:</label>			
+			<input type=text name=fornecedor placeholder="" size=40> <p></p>
+			<label for="fname">Tipo:</label>			
+			<input type=text name=tipo placeholder="" size=25> <p></p>
+			<label for="fname">Site:</label>			
+			<input type=text name=site placeholder="" size=40> <p></p>
+			<label for="fname">Fone:</label>			
+			<input type=text name=fone placeholder="" size=15> <p></p>
+			<label for="fname">Email:</label>			
+			<input type=text name=email placeholder="" size=40> <p></p>
+			<input type = "submit" value="Salva ">
+			<input type = "reset" value="Limpar">
+		</form>
+		
+		<div class="rodape">Todos os Direitos reservados a AdilSoftware</div>
+		
+	</body>
+</html>

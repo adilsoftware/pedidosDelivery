@@ -1,0 +1,129 @@
+<?php
+$conexao=mysqli_connect('fdb30.awardspace.net', '3639130_adilsoftware', 'ad81guilherme', '3639130_adilsoftware');
+
+?>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link href="bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="menu.css">	
+	
+	</head>
+
+	<body>
+
+	<nav class="menu">
+			<ul>
+				<li><a href="#">ARQUIVO</a>
+					<ul>
+						<li><a href="#">CADASTRO</a>
+							<ul>
+								<li><a href="clientes.html">CLIENTES</a></li>
+								<li><a href="fornecedor.html">FORNECEDOR</a></li>
+								<li><a href="produto.html">PRODUTOS</a></li>
+							</ul>
+						</li>
+						<li><a href="pesquisar.html">PESQUISAR</a>
+							
+						</li>
+						<li><a href="imprimir.html">IMPRIMIR</a></li>
+						<li><a href="index.html">FECHAR</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">RELATORIO</a>
+					<ul>
+						<li><a href="index2.php">CLIENTES</a></li>
+						<li><a href="rel_fornecedor.html">FORNECEDOR</a></li>
+						<li><a href="rel_produtos.html">PRODUTOS</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="configuracao.html">CONFIGURAÇÃO</a>
+				</li>
+				
+				<li><a href="ajuda.html">AJUDA</a></li>
+			</ul>
+		</nav>
+		
+		<div class="static"></div>
+		<div class="fundo"></div>
+
+
+ <p></p>
+  <p align=center><b>Digite qualquer coisa para ele pesquisar na tabela...</b></p>  
+ 
+
+<table class="pesquisar" width="90%" border=0 bordercolor="red" bgcolor="#e6f2ff" align=center>
+<tr><td colspan=6>
+
+<b>Pesquisar</b><input class="filtro" id="myInput" type="text" placeholder="pesquisar..">
+<br>
+
+</td></tr>
+
+<tr bgcolor="#6da3f9" >
+<td align=center><b>ID</b></td>
+<td align=center><b>Descrição</td>
+<td align=center><b>Categoria</td>
+<td align=center><b>Valor</td>
+<td align=center><b>Quantidade</td>
+<td align=center><b>Validade</td>	
+</tr>
+
+<tbody id="myTable">
+
+
+
+<?php
+$sql="select * from tbproduto order by descricao";
+$result=mysqli_query($conexao,$sql);
+
+while($mostrar=mysqli_fetch_array($result)){
+	?>
+
+	<tr>
+	<td><?php echo $mostrar['idproduto'] ?></td>
+	<td><?php echo $mostrar['descricao'] ?></td>
+	<td><?php echo $mostrar['categoria'] ?></td>
+	<td><?php echo $mostrar['valor'] ?></td>
+	<td><?php echo $mostrar['quantidade'] ?></td>
+	<td><?php echo $mostrar['validade'] ?></td>
+    </tr>
+
+
+     
+
+<?php
+}
+
+?>
+
+    </tbody>
+ 
+</table>
+
+
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+		<div class="rodape">Todos os Direitos reservados a AdilSoftware</div>	
+
+	</body>
+</html> 

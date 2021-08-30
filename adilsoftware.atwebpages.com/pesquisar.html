@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="menu.css">	
+	</head>
+
+	<body>
+		<nav class="menu">
+			<ul>
+				<li><a href="#">ARQUIVO</a>
+					<ul>
+						<li><a href="#">CADASTRO</a>
+							<ul>
+								<li><a href="clientes.html">CLIENTES</a></li>
+								<li><a href="fornecedor.html">FORNECEDOR</a></li>
+								<li><a href="produto.html">PRODUTOS</a></li>
+							</ul>
+						</li>
+						<li><a href="pesquisar.html">PESQUISAR</a>
+							
+						</li>
+						<li><a href="imprimir.html">IMPRIMIR</a></li>
+						<li><a href="index.html">FECHAR</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">RELATORIO</a>
+					<ul>
+						<li><a href="rel_clientes.html">CLIENTES</a></li>
+						<li><a href="rel_fornecedor.html">FORNECEDOR</a></li>
+						<li><a href="rel_produtos.html">PRODUTOS</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="configuracao.html">CONFIGURAÇÃO</a>
+				
+				</li>
+				
+				<li><a href="ajuda.html">AJUDA</a></li>
+			</ul>
+		</nav>
+		
+		<div class="static"></div>
+		
+		
+		<p></p>
+		<p></p>
+		
+<table class="pesquisar" width="90%" border=0 bgcolor="#e6f2ff" align=center>
+<tr bgcolor="#6da3f9"><td color="white" align=CENTER><b style="color:white">PESQUISAR BASE DE DADOS</b></td></tr>
+<tr><td>
+
+<table class="pesquisar" width="90%" border=0 bordercolor="red" bgcolor="#e6f2ff" align=center>
+<tr><td colspan=5>
+<form class="pesquisar" action="registra.jsp" method="GET">
+<input type=text name=descricao placeholder="Descrição?" size=50> 
+<select class="pesquisar" name=UF>
+<option class="pesquisar" value=0> Selecione... </option>
+<option value=1> Clientes </option>
+<option value=7> Fornecedor </option>
+<option value=9> Produto </option>
+</select>
+<input class="pesquisar" type = "submit" value="Buscar" >
+<input type = "reset" value="Limpar" >
+</form>
+</td></tr>
+</table>
+</table>
+
+		<div class="fundo"></div>
+		<div class="rodape">Todos os Direitos reservados a AdilSoftware</div>	
+
+	</body>
+</html>

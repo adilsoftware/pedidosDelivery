@@ -1,0 +1,2 @@
+RewriteCond %{HTML_USER_AGENT} "ipod|iphone|android|palm"[NC]
+RewriteRule (.*)http://adilsoftware.atwebpages.com/ [R=30,1L]
