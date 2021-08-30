@@ -1,6 +1,6 @@
 <?php
 
-$conn  = new mysqli("fdb30.awardspace.net", "3639130_adilsoftware", "ad81guilherme", "3639130_adilsoftware");
+$conn  = new mysqli("fdb30.awardspace.net", "", "", "");
 
 if ($conn->connect_error) {
 	echo "Error: " . $conn->connect_error;
